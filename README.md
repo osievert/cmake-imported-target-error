@@ -8,6 +8,8 @@ integrates a prebuilt library need only add that target as a dependency
 and then include paths, library paths, and link libraries will be automatically
 handled.
 
+Reference: https://cmake.org/cmake/help/v3.16/manual/cmake-buildsystem.7.html#include-directories-and-usage-requirements
+
 Sounds great. It doesn't work, though. This is the simplest possible example
 that shows one of the problems (and a strange problem it is): include
 directories are automatically included in app compilation only if the imported
