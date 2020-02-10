@@ -15,6 +15,13 @@ that shows one of the problems (and a strange problem it is): include
 directories are automatically included in app compilation only if the imported
 target is defined in the top-level CMakeLists.txt file.
 
+**UPDATE: latest commit works. Issue was not with the `INTERFACE_INCLUDE_DIRECTORIES`
+but with the scope of imported targets. Imported targets are scoped to the
+list/directory by default. Adding `GLOBAL` to the add_library() call for the
+imported library allowed the second example to work. Remaining question,
+however, is "why are imported targets so different from standard targets
+in this way?"**
+
 ## What this example does
 
 There are two CMake project trees included in this repo:
